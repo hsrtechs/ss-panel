@@ -4,8 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            信息更新
-            <small>Profile Update</small>
+            Profile Update
         </h1>
     </section>
 
@@ -15,7 +14,7 @@
             <div class="col-sm-12">
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> Error Occurred!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
@@ -28,7 +27,7 @@
                 </div>
                 <div id="ss-msg-success" class="alert alert-info alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> 修改成功!</h4>
+                    <h4><i class="icon fa fa-info"></i> Update successfully!</h4>
 
                     <p id="ss-msg-success-p"></p>
                 </div>
@@ -40,7 +39,7 @@
                 <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">网站登录密码修改</h3>
+                        <h3 class="box-title">Login Password Update</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
@@ -49,22 +48,22 @@
 
 
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="当前密码(必填)" id="oldpwd">
+                            <input type="password" class="form-control" placeholder="Current Password(required)" id="oldpwd">
                         </div>
 
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="新密码" id="pwd">
+                            <input type="password" class="form-control" placeholder="New Password" id="pwd">
                         </div>
 
                         <div class="form-group">
-                            <input type="password" placeholder="确认密码" class="form-control" id="repwd">
+                            <input type="password" placeholder="Confirm Password" class="form-control" id="repwd">
                         </div>
 
                     </div>
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" id="pwd-update" class="btn btn-primary">修改</button>
+                        <button type="submit" id="pwd-update" class="btn btn-primary">Submit</button>
                     </div>
 
                 </div>
@@ -76,18 +75,18 @@
                     <div class="box-header">
                         <i class="fa fa-align-left"></i>
 
-                        <h3 class="box-title">Shadowsocks连接密码修改</h3>
+                        <h3 class="box-title">Shadowsocks Connection Info</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
 
 
                         <div class="form-group">
-                            <input type="text" id="sspwd" placeholder="输入新密码" class="form-control">
+                            <input type="text" id="sspwd" placeholder="Type New Password" class="form-control">
                         </div>
 
                         <div class="box-footer">
-                            <button type="submit" id="ss-pwd-update" class="btn btn-primary">修改</button>
+                            <button type="submit" id="ss-pwd-update" class="btn btn-primary">Submit</button>
                         </div>
 
                     </div>
@@ -132,7 +131,7 @@
                     }
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })
@@ -159,7 +158,7 @@
                     }
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })

@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            修改资料
+            Modify Profile
             <small>Profile Edit</small>
         </h1>
     </section>
@@ -15,13 +15,13 @@
             <div class="col-xs-12">
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> There's an error!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
                 <div id="ss-msg-success" class="alert alert-success alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> 修改成功!</h4>
+                    <h4><i class="icon fa fa-info"></i> Update successfully!</h4>
 
                     <p id="ss-msg-success-p"></p>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="box-header">
                         <i class="fa fa-key"></i>
 
-                        <h3 class="box-title">网站登录密码修改</h3>
+                        <h3 class="box-title">Change Login Password</h3>
                     </div>
                     <!-- /.box-header --><!-- form start -->
 
@@ -51,26 +51,26 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">当前密码</label>
+                                <label class="col-sm-3 control-label">Current Password</label>
 
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" placeholder="当前密码(必填)" id="oldpwd">
+                                    <input type="password" class="form-control" placeholder="Current Password(Required)" id="oldpwd">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">新密码</label>
+                                <label class="col-sm-3 control-label">New Password</label>
 
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" placeholder="新密码" id="pwd">
+                                    <input type="password" class="form-control" placeholder="New Password" id="pwd">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">确认密码</label>
+                                <label class="col-sm-3 control-label">Repeat Password</label>
 
                                 <div class="col-sm-9">
-                                    <input type="password" placeholder="确认密码" class="form-control" id="repwd">
+                                    <input type="password" placeholder="Repeat Password" class="form-control" id="repwd">
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" id="pwd-update" class="btn btn-primary">修改</button>
+                        <button type="submit" id="pwd-update" class="btn btn-primary">Submit</button>
                     </div>
 
                 </div>
@@ -91,32 +91,32 @@
                     <div class="box-header">
                         <i class="fa fa-link"></i>
 
-                        <h3 class="box-title">Shadowsocks连接信息修改</h3>
+                        <h3 class="box-title">Shadowsocks Info Modify</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="form-horizontal">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">连接密码</label>
+                                <label class="col-sm-3 control-label">Password For Connection</label>
 
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="text" id="sspwd" placeholder="输入新连接密码" class="form-control">
+                                        <input type="text" id="sspwd" placeholder="Type new password for connection" class="form-control">
                                         <div class="input-group-btn">
-                                            <button type="submit" id="ss-pwd-update" class="btn btn-primary">修改</button>
+                                            <button type="submit" id="ss-pwd-update" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">加密方式</label>
+                                <label class="col-sm-3 control-label">Encryption Method</label>
 
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="text" id="method" placeholder="输入新加密方式" class="form-control">
+                                        <input type="text" id="method" placeholder="Type new encryption method" class="form-control">
                                         <div class="input-group-btn">
-                                            <button type="submit" id="method-update" class="btn btn-primary">修改</button>
+                                            <button type="submit" id="method-update" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                     }
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error:" + jqXHR.status);
                 }
             })
         })
@@ -192,7 +192,7 @@
                     }
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })
@@ -220,7 +220,7 @@
                     }
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })

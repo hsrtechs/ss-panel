@@ -4,8 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            删除我的帐号
-            <small>Deactive my account</small>
+            Deactive my account
         </h1>
     </section>
 
@@ -15,7 +14,7 @@
             <div class="col-sm-12">
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> Error Occurred!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
@@ -30,7 +29,7 @@
                         <div class="box-header">
                             <i class="fa fa-user"></i>
 
-                            <h3 class="box-title">输入当前密码以验证身份</h3>
+                            <h3 class="box-title">Please enter your current password to continue.</h3>
                         </div>
                         <div id="msg-success" class="alert alert-info alert-dismissable" style="display:none">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -39,12 +38,12 @@
                             <p id="msg-success-p"></p>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="当前密码(必填)" id="passwd">
+                            <input type="password" class="form-control" placeholder="Current Password(Required)" id="passwd">
                         </div>
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" id="kill" class="btn btn-danger">删除我的帐号</button>
+                        <button type="submit" id="kill" class="btn btn-danger">Deactivate My Account</button>
                     </div>
 
                 </div>
@@ -52,11 +51,11 @@
             </div>
             <div class="col-md-6">
                 <div class="callout callout-warning">
-                    <h4>注意！</h4>
+                    <h4>Notice!</h4>
 
-                    <p>帐号删除后，您的所有数据都会被<b>真实地</b>删除。</p>
+                    <p>Your data will be erased as well along with your account.</p>
 
-                    <p>如果想重新使用本网站提供的服务，您需要重新注册。</p>
+                    <p>You need to create new account if you want to use our service again.</p>
 
                 </div>
             </div>
@@ -93,7 +92,7 @@
                     }
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })

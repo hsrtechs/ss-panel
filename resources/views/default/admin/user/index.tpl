@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            用户列表
-            <small>User List</small>
+            User List
         </h1>
     </section>
 
@@ -20,17 +19,17 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
-                                <th>邮箱</th>
-                                <th>端口</th>
-                                <th>状态</th>
-                                <th>加密方式</th>
-                                <th>已用流量/总流量</th>
-                                <th>最后在线时间</th>
-                                <th>最后签到时间</th>
-                                <th>注册时间</th>
-                                <th>注册IP</th>
-                                <th>邀请者</th>
-                                <th>操作</th>
+                                <th>Email</th>
+                                <th>Port</th>
+                                <th>Status</th>
+                                <th>Encryption Method</th>
+                                <th>Used/Total Traffic</th>
+                                <th>Last Online</th>
+                                <th>Last Say Hi</th>
+                                <th>Register Date</th>
+                                <th>Sign up IP</th>
+                                <th>Invitation Free</th>
+                                <th>Action</th>
                             </tr>
                             {foreach $users as $user}
                             <tr>
@@ -46,8 +45,8 @@
                                 <th>{$user->reg_ip}</th>
                                 <th>{$user->ref_by}</th>
                                 <td>
-                                    <a class="btn btn-info btn-sm" href="/admin/user/{$user->id}/edit">编辑</a>
-                                    <a class="btn btn-danger btn-sm" id="delete" value="{$user->id}" href="/admin/user/{$user->id}/delete">删除</a>
+                                    <a class="btn btn-info btn-sm" href="/admin/user/{$user->id}/edit">Edit</a>
+                                    <a class="btn btn-danger btn-sm" id="delete" value="{$user->id}" href="/admin/user/{$user->id}/delete">Delete</a>
                                 </td>
                             </tr>
                             {/foreach}
@@ -87,7 +86,7 @@
                 error:function(jqXHR){
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误："+jqXHR.status);
+                    $("#msg-error-p").html("There was an error: "+jqXHR.status);
                 }
             });
         }

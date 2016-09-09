@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            发送邮件测试
-            <small>Mail Testing</small>
+            Mailing Test
         </h1>
     </section>
 
@@ -16,12 +15,12 @@
             <div class="col-md-12">
                 <div id="msg-success" class="alert alert-success alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> 成功!</h4>
+                    <h4><i class="icon fa fa-info"></i> Success!</h4>
                     <p id="msg-success-p"></p>
                 </div>
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> Error Occurred!</h4>
                     <p id="msg-error-p"></p>
                 </div>
             </div>
@@ -49,7 +48,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" id="submit" name="action" value="add" class="btn btn-primary">发送测试邮件
+                        <button type="submit" id="submit" name="action" value="add" class="btn btn-primary">Send Test Mail
                         </button>
                     </div>
                 </div>
@@ -86,7 +85,7 @@
                 error: function (jqXHR) {
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误：" + jqXHR.status);
+                    $("#msg-error-p").html("There was an error: " + jqXHR.status);
                 }
             });
         }

@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            邀请
-            <small>Invite</small>
+            Invite
         </h1>
     </section>
 
@@ -16,7 +15,7 @@
             <div class="col-md-12">
                 <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> 成功!</h4>
+                    <h4><i class="icon fa fa-info"></i> Success!</h4>
 
                     <p id="msg-success-p"></p>
                 </div>
@@ -29,7 +28,7 @@
                 <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">添加邀请码</h3>
+                        <h3 class="box-title">Add Invitation</h3>
                     </div>
                     <!-- /.box-header -->
 
@@ -38,26 +37,26 @@
                         <div class="form-horizontal">
 
                             <div class="form-group">
-                                <label for="cate_title" class="col-sm-3 control-label">邀请码前缀</label>
+                                <label for="cate_title" class="col-sm-3 control-label">Prefix of Invitation</label>
 
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="prefix" placeholder="小于8个字符">
+                                    <input class="form-control" id="prefix" placeholder="Less than 8 characters">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title" class="col-sm-3 control-label">邀请码类别</label>
+                                <label for="cate_title" class="col-sm-3 control-label">Invitation Type</label>
 
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="uid" type="number" placeholder="0为公开，其他数字为对应用户的UID">
+                                    <input class="form-control" id="uid" type="number" placeholder="0 to make site public, the other numbers associate with user UID.">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title" class="col-sm-3 control-label">邀请码数量</label>
+                                <label for="cate_title" class="col-sm-3 control-label">Invitation Numbers</label>
 
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="num" type="number" placeholder="要生成的邀请码数量">
+                                    <input class="form-control" id="num" type="number" placeholder="The number of Invitation to generate">
                                 </div>
                             </div>
                         </div>
@@ -65,7 +64,7 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button id="invite" type="submit" name="action" value="add" class="btn btn-primary">生成</button>
+                        <button id="invite" type="submit" name="action" value="add" class="btn btn-primary">Generate</button>
                     </div>
 
                 </div>
@@ -73,10 +72,10 @@
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">注意</h3>
+                        <h3 class="box-title">Notice</h3>
                     </div>
                     <div class="box-footer">
-                        <p>公共邀请码（类别为0的邀请码）请<a href="/code">在这里查看</a>。</p>
+                        <p>Public Invitation（type 0）can be <a href="/code">reviewed here</a>.</p>
                     </div>
                 </div>
             </div>
@@ -108,7 +107,7 @@
                     // window.location.reload();
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })

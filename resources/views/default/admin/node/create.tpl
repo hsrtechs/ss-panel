@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            添加节点
-            <small>Add Node</small>
+            Add Node
         </h1>
     </section>
 
@@ -16,13 +15,13 @@
             <div class="col-md-12">
                 <div id="msg-success" class="alert alert-success alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> 成功!</h4>
+                    <h4><i class="icon fa fa-info"></i> Success!</h4>
 
                     <p id="msg-success-p"></p>
                 </div>
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> Error Occurred!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
@@ -37,9 +36,9 @@
                         <div class="form-horizontal">
                             <div class="row">
                                 <fieldset class="col-sm-6">
-                                    <legend>连接信息</legend>
+                                    <legend>Connection Info</legend>
                                     <div class="form-group">
-                                        <label for="title" class="col-sm-3 control-label">节点名称</label>
+                                        <label for="title" class="col-sm-3 control-label">Node Name</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="name" value="">
@@ -47,7 +46,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="server" class="col-sm-3 control-label">节点地址</label>
+                                        <label for="server" class="col-sm-3 control-label">Node Address</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="server" value="">
@@ -55,7 +54,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="method" class="col-sm-3 control-label">加密方式</label>
+                                        <label for="method" class="col-sm-3 control-label">Encryption Method</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="method" value="">
@@ -63,7 +62,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="rate" class="col-sm-3 control-label">流量比例</label>
+                                        <label for="rate" class="col-sm-3 control-label">Traffic Calculation Rate</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="rate" value="1">
@@ -72,41 +71,41 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="method" class="col-sm-3 control-label">自定义加密</label>
+                                        <label for="method" class="col-sm-3 control-label">Custom Encryption Method</label>
 
                                         <div class="col-sm-9">
                                             <select class="form-control" id="custom_method">
                                                 <option value="0" selected="selected">
-                                                    不支持
+                                                    Not Supported
                                                 </option>
                                                 <option value="1">
-                                                    支持
+                                                    Supported
                                                 </option>
                                             </select>
 
                                             <p class="help-block">
-                                                <a href="https://github.com/orvice/ss-panel/wiki/v3-custom-method">如何使用自定义加密?</a>|
-                                                <a href="https://github.com/orvice/ss-panel/wiki/v3-traffic-rate">如何设置流量比例?</a>
+                                                <a href="https://github.com/orvice/ss-panel/wiki/v3-custom-method">How to use custom encryption method?</a>|
+                                                <a href="https://github.com/orvice/ss-panel/wiki/v3-traffic-rate">How to set traffic calculation rate?</a>
                                             </p>
                                         </div>
                                     </div>
 
                                 </fieldset>
                                 <fieldset class="col-sm-6">
-                                    <legend>描述信息</legend>
+                                    <legend>Connection Info</legend>
                                     <div class="form-group">
-                                        <label for="type" class="col-sm-3 control-label">是否显示</label>
+                                        <label for="type" class="col-sm-3 control-label">Display or not?</label>
 
                                         <div class="col-sm-9">
                                             <select class="form-control" id="type">
-                                                <option value="1" selected="selected">显示</option>
-                                                <option value="0">隐藏</option>
+                                                <option value="1" selected="selected">Display</option>
+                                                <option value="0">Hidden</option>
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="status" class="col-sm-3 control-label">节点状态</label>
+                                        <label for="status" class="col-sm-3 control-label">Node Status</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="status" value="">
@@ -114,14 +113,14 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="sort" class="col-sm-3 control-label">排序</label>
+                                        <label for="sort" class="col-sm-3 control-label">Set Order</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="sort" type="number" value="">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="info" class="col-sm-3 control-label">节点描述</label>
+                                        <label for="info" class="col-sm-3 control-label">Node Description</label>
 
                                         <div class="col-sm-9">
                                             <textarea class="form-control" id="info" rows="3"></textarea>
@@ -133,7 +132,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" id="submit" name="action" value="add" class="btn btn-primary">添加</button>
+                        <button type="submit" id="submit" name="action" value="add" class="btn btn-primary">Add</button>
                     </div>
                 </div>
                 <!-- /.box -->
@@ -178,7 +177,7 @@
                 error: function (jqXHR) {
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误：" + jqXHR.status);
+                    $("#msg-error-p").html("There was an error: " + jqXHR.status);
                 }
             });
         }

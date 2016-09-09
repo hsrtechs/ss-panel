@@ -3,8 +3,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            节点列表
-            <small>Node List</small>
+            Node List
         </h1>
     </section>
     <!-- Main content -->
@@ -13,9 +12,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
-                    <h4>注意!</h4>
+                    <h4>Notice!</h4>
 
-                    <p>配置文件以及二维码请勿泄露！</p>
+                    <p>Please keep your configuration file and QR code privately!</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -23,7 +22,7 @@
                     <div class="box-header">
                         <i class="fa fa-code"></i>
 
-                        <h3 class="box-title">配置Json</h3>
+                        <h3 class="box-title">Configure Json</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -36,7 +35,7 @@
                     <div class="box-header">
                         <i class="fa fa-code"></i>
 
-                        <h3 class="box-title">配置地址</h3>
+                        <h3 class="box-title">Configuration Address</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -53,7 +52,7 @@
                     <div class="box-header">
                         <i class="fa fa-qrcode"></i>
 
-                        <h3 class="box-title">配置二维码</h3>
+                        <h3 class="box-title">Configure QR Code</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -73,32 +72,32 @@
                     <div class="box-header">
                         <i class="fa fa-qrcode"></i>
 
-                        <h3 class="box-title">Surge配置</h3>
+                        <h3 class="box-title">Surge Configuration</h3>
                     </div>
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-4">
-                                <h4>Surge使用步骤</h4>
+                                <h4>Surge Tips</h4>
 
-                                <p>基础配置只需要做一次：
+                                <p>You only need to do once for basic configuration:
                                 <ol>
-                                    <li>打开 Surge ，点击右上角“Edit”，点击“Download Configuration from URL”</li>
-                                    <li>输入基础配置的地址（或扫描二维码得到地址，复制后粘贴进来），点击“OK”</li>
-                                    <li><b>注意：</b>基础配置不要改名，不可以直接启用。</li>
+                                    <li>Launch Surge app and click on right top “Edit”, click “Download Configuration from URL”</li>
+                                    <li>Type the address of your basic configuration (Or scan QR Code for the address, copy and paste here), then click on “OK”.</li>
+                                    <li><b>Notice: </b>Basic Configuration is not supposed to be renamed, and cann't be used directly.</li>
                                 </ol>
                                 </p>
-                                <p>代理配置需要根据不同的节点进行添加：
+                                <p>Proxy Configuration will be added based on different nodes:
                                 <ol>
-                                    <li>点击“New Empty Configuration”</li>
-                                    <li>在“NAME”里面输入一个配置文件的名称</li>
-                                    <li>点击下方“Edit in Text Mode”</li>
-                                    <li>输入代理配置的全部文字（或扫描二维码得到配置，复制后粘贴进来），点击“OK”</li>
-                                    <li>直接启用代理配置即可科学上网。</li>
+                                    <li>Click on “New Empty Configuration”.</li>
+                                    <li>Type a name for configuration in field “NAME”.</li>
+                                    <li>Click on “Edit in Text Mode”.</li>
+                                    <li>Type the full address of proxy configuration (Or scan the QR Code for the address, copy and paste here), then click on “OK”.</li>
+                                    <li>Enable Proxy Configuration and you are done.</li>
                                 </ol>
                                 </p>
                             </div>
                             <div class="col-md-4">
-                                <h4>基础配置</h4>
+                                <h4>Basic Configuration</h4>
 
                                 <div class="text-center">
                                     <div id="surge-base-qr"></div>
@@ -106,7 +105,7 @@
                                 <textarea id="surge-base-text" class="form-control" rows="6">{$surge_base}</textarea>
                             </div>
                             <div class="col-md-4">
-                                <h4>代理配置</h4>
+                                <h4>Proxy Configuration</h4>
 
                                 <div class="text-center">
                                     <div id="surge-proxy-qr"></div>

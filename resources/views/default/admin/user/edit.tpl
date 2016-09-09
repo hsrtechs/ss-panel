@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            用户编辑 #{$user->id}
-            <small>Edit User</small>
+             Edit User
         </h1>
     </section>
 
@@ -16,13 +15,13 @@
             <div class="col-md-12">
                 <div id="msg-success" class="alert alert-success alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> 成功!</h4>
+                    <h4><i class="icon fa fa-info"></i> Success!</h4>
 
                     <p id="msg-success-p"></p>
                 </div>
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
                     <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> Error Occurred!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
@@ -37,32 +36,32 @@
                         <div class="form-horizontal">
                             <div class="row">
                                 <fieldset class="col-sm-6">
-                                    <legend>帐号信息</legend>
+                                    <legend>Account Info</legend>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">邮箱</label>
+                                        <label class="col-sm-3 control-label">Email</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="email" type="email" value="{$user->email}">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">密码</label>
+                                        <label class="col-sm-3 control-label">Password</label>
 
                                         <div class="col-sm-9">
-                                            <input class="form-control" id="pass" value="" placeholder="不修改时留空">
+                                            <input class="form-control" id="pass" value="" placeholder="Leave it blank if you do not want to change password">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">是否管理员</label>
+                                        <label class="col-sm-3 control-label">Is Admin?</label>
 
                                         <div class="col-sm-9">
                                             <select class="form-control" id="is_admin">
                                                 <option value="0" {if $user->is_admin==0}selected="selected"{/if}>
-                                                    否
+                                                    No
                                                 </option>
                                                 <option value="1" {if $user->is_admin==1}selected="selected"{/if}>
-                                                    是
+                                                    Yes
                                                 </option>
                                             </select>
                                         </div>
@@ -70,14 +69,14 @@
 
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">用户状态</label>
+                                        <label class="col-sm-3 control-label">User Status</label>
 
                                         <div class="col-sm-9"><select class="form-control" id="enable">
                                                 <option value="1" {if $user->enable==1}selected="selected"{/if}>
-                                                    正常
+                                                    Enabled
                                                 </option>
                                                 <option value="0" {if $user->enable==0}selected="selected"{/if}>
-                                                    禁用
+                                                    Disabled
                                                 </option>
                                             </select>
                                         </div>
@@ -85,9 +84,9 @@
 
                                 </fieldset>
                                 <fieldset class="col-sm-6">
-                                    <legend>ShadowSocks连接信息</legend>
+                                    <legend>ShadowSocks Connection Info</legend>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">连接端口</label>
+                                        <label class="col-sm-3 control-label">Connection Port</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="port" type="number" value="{$user->port}">
@@ -95,7 +94,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">连接密码</label>
+                                        <label class="col-sm-3 control-label">Connection Password</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="passwd" value="{$user->passwd}">
@@ -103,7 +102,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">自定义加密</label>
+                                        <label class="col-sm-3 control-label">Custom Encryption Method</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="method" value="{$user->method}">
@@ -113,9 +112,9 @@
                             </div>
                             <div class="row">
                                 <fieldset class="col-sm-6">
-                                    <legend>流量</legend>
+                                    <legend>Traffic</legend>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">总流量</label>
+                                        <label class="col-sm-3 control-label">Total Traffic</label>
 
                                         <div class="col-sm-9">
                                             <div class="input-group">
@@ -129,7 +128,7 @@
 
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">已用流量</label>
+                                        <label class="col-sm-3 control-label">Used</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="traffic_usage" type="text"
@@ -138,9 +137,9 @@
                                     </div>
                                 </fieldset>
                                 <fieldset class="col-sm-6">
-                                    <legend>邀请</legend>
+                                    <legend>Invite</legend>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">可用邀请数量</label>
+                                        <label class="col-sm-3 control-label">Invitation Available</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="invite_num" type="number"
@@ -149,7 +148,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">邀请人ID</label>
+                                        <label class="col-sm-3 control-label">Invitation from ID</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="ref_by" type="number"
@@ -162,7 +161,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" id="submit" name="action" value="add" class="btn btn-primary">修改</button>
+                        <button type="submit" id="submit" name="action" value="add" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </div>

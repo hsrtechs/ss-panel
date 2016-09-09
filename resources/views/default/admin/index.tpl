@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            管理中心
-            <small>Admin Control</small>
+            Admin Area
         </h1>
     </section>
 
@@ -20,7 +19,7 @@
                     <div class="inner">
                         <h3>{$sts->getTotalUser()}</h3>
 
-                        <p>总用户</p>
+                        <p>Total Users</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person"></i>
@@ -34,7 +33,7 @@
                     <div class="inner">
                         <h3>{$sts->getCheckinUser()}</h3>
 
-                        <p>签到用户</p>
+                        <p>Say Hi Users</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
@@ -48,7 +47,7 @@
                     <div class="inner">
                         <h3>{$sts->getOnlineUser(3600)}</h3>
 
-                        <p>前一小时在线用户</p>
+                        <p>Online users in last hour</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
@@ -65,7 +64,7 @@
                     <div class="inner">
                         <h3>{$sts->getTotalNode()}</h3>
 
-                        <p>节点数</p>
+                        <p>Nodes Number</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -79,7 +78,7 @@
                     <div class="inner">
                         <h3>{$sts->getTrafficUsage()}</h3>
 
-                        <p>产生流量</p>
+                        <p>Traffic Occurred</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>

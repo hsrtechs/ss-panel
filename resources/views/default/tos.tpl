@@ -3,33 +3,33 @@
 <div class="section no-pad-bot" id="index-banner">
 <div class="container">
     <div class="page-header">
-        <h1>用户协议 Terms of Service </h1>
+        <h1>Terms of Service </h1>
     </div>
-    <p>{$config["appName"]}，以下简称本站。</p>
-    <h3>隐私</h3>
+    <p>{$config["appName"]}, short as <strong>The site</strong> below.</p>
+    <h3>Privacy</h3>
     <p>
         <ul>
-            <li>用户注册时候需要提供邮箱以及密码，并自行保管。邮箱为用户的唯一凭证。</li>
-            <li>本站会加密存储用户密码，尽量保证数据安全，但并不保证这些信息的绝对安全。</li>
+            <li>Clients need to input email address and password, and store the credentials by themselves. The email is the only evidence of clients.</li>
+            <li>The site will encrypt the password and try our best to keep the data safe.</li>
         </ul>
     </p>
 
-    <h3>使用条款</h3>
+    <h3>Acceptable Use Policy</h3>
     <p>
         <ul>
-            <li>禁止使用本站服务进行任何违法恶意活动。</li>
-            <li>使用任何节点，需遵循节点所属国家的相关法律以及中国法律。</li>
-            <li>禁止滥用本站提供的服务。</li>
-            <li>对于免费用户，我们有权在不通知的情况下删除账户。</li>
-            <li>任何违法使用条款的用户，我们将会删除违规账户并没收使用本站服务的权利。</li>
+            <li>Using the service provided by the site to do any illegal things is forbidden.</li>
+            <li>You need to obey the law of countries that our nodes are located in.</li>
+            <li>Abuse is forbidden at any of our service.</li>
+            <li>We hold the right to termniate any free accounts without notifying.</li>
+            <li>For those clients who break the law with our services, we will terminate the accounts right away and discontinue the services.</li>
        </ul>
     </p>
 
-    <h3>其它</h3>
+    <h3>Extra</h3>
     <p>
     <ul>
-        <li>本站仅限人类及猫注册使用。</li>
-        <li>TOS更新时用户需要遵守最新TOS。</li>
+        <li>We welcome everyone to sign up and use our service.</li>
+        <li>ToS might be changed time to time, clients need to check back often and know the latest changes.</li>
     </ul>
     </p>
 

@@ -13,29 +13,29 @@
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{$config["appName"]}</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="/">首页</a></li>
-            <li><a href="https://shadowsocks.org/en/download/clients.html">客户端下载</a></li>
-            <li><a href="/code">邀请码</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="https://shadowsocks.org/en/download/clients.html">Client</a></li>
+            <li><a href="/code">Invitation Code</a></li>
             {if $user->isLogin}
-                <li><a href="/user">用户中心</a></li>
-                <li><a href="/user/logout">退出</a></li>
+                <li><a href="/user">Portal</a></li>
+                <li><a href="/user/logout">Log Out</a></li>
             {else}
-                <li><a href="/auth/login">登录</a></li>
-                <li><a href="/auth/register">注册</a></li>
+                <li><a href="/auth/login">Log In</a></li>
+                <li><a href="/auth/register">Sign Up</a></li>
             {/if}
 
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="/">首页</a></li>
-            <li><a href="https://shadowsocks.org/en/download/clients.html">客户端下载</a></li>
-            <li><a href="/code">邀请码</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="https://shadowsocks.org/en/download/clients.html">Client</a></li>
+            <li><a href="/code">Invitation Code</a></li>
             {if $user->isLogin}
-                <li><a href="/user">用户中心</a></li>
-                <li><a href="/user/logout">退出</a></li>
+                <li><a href="/user">Portal</a></li>
+                <li><a href="/user/logout">Log Out</a></li>
             {else}
-                <li><a href="/auth/login">登录</a></li>
-                <li><a href="/auth/register">注册</a></li>
+                <li><a href="/auth/login">Log In</a></li>
+                <li><a href="/auth/register">Sign Up</a></li>
             {/if}
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>

@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            邀请
+            Invite
             <small>Invite</small>
         </h1>
     </section>
@@ -16,7 +16,7 @@
             <div class="col-sm-12">
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> Error Occurred!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
@@ -30,18 +30,18 @@
                     <div class="box-header">
                         <i class="fa fa-rocket"></i>
 
-                        <h3 class="box-title">邀请</h3>
+                        <h3 class="box-title">Invite</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <p>当前您可以生成<code>{$user->invite_num}</code>个邀请码。 </p>
+                        <p>You can generate <code>{$user->invite_num}</code> invitation codes at this moment. </p>
                         {if $user->invite_num }
-                            <button id="invite" class="btn btn-sm btn-info">生成我的邀请码</button>
+                            <button id="invite" class="btn btn-sm btn-info">Generate the invitation code for me</button>
                         {/if}
                     </div>
                     <!-- /.box -->
                     <div class="box-header">
-                        <h3 class="box-title">我的邀请码</h3>
+                        <h3 class="box-title">My Invitation Code</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="table-responsive">
@@ -49,8 +49,8 @@
                             <thead>
                             <tr>
                                 <th>###</th>
-                                <th>邀请码(点右键复制链接)</th>
-                                <th>状态</th>
+                                <th>Invitation Code(Right click to copy)</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -59,7 +59,7 @@
                                     <td><b>{$code->id}</b></td>
                                     <td><a href="/auth/register?code={$code->code}" target="_blank">{$code->code}</a>
                                     </td>
-                                    <td>可用</td>
+                                    <td>Available</td>
                                 </tr>
                             {/foreach}
                             </tbody>
@@ -70,21 +70,21 @@
 
             <div class="col-md-6">
                 <div class="callout callout-warning">
-                    <h4>注意！</h4>
+                    <h4>Notice!</h4>
 
-                    <p>邀请码请给认识的需要的人。</p>
+                    <p>Please only share the code to people you know and have demand for that code.</p>
 
-                    <p>邀请有记录，若被邀请的人违反用户协议，您将会有连带责任。</p>
+                    <p>We track the invitation, if the people you invited abuse, you might be punished as well.</p>
                 </div>
 
                 <div class="callout callout-info">
-                    <h4>说明</h4>
+                    <h4>Note:</h4>
 
-                    <p>用户注册48小时后，才可以生成邀请码。</p>
+                    <p>Users can only generate invitation code 48 hours after register.</p>
 
-                    <p>邀请码暂时无法购买，请珍惜。</p>
+                    <p>Invitation code cannot be purchased, so you should cherish.</p>
 
-                    <p>公共页面不定期发放邀请码，如果用完邀请码可以关注公共邀请。</p>
+                    <p>The public page will release invitation code every now and then, you can keep an eye on it to get new invitation code.</p>
                 </div>
             </div>
             <!-- /.col (right) -->
@@ -104,7 +104,7 @@
                     window.location.reload();
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("There was an error: " + jqXHR.status);
                 }
             })
         })

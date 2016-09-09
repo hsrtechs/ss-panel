@@ -5,8 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            流量使用记录
-            <small>Traffic Log</small>
+            Traffic Log
         </h1>
     </section>
 
@@ -21,9 +20,9 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
-                                <th>用户</th>
-                                <th>获得流量</th>
-                                <th>签到时间</th>
+                                <th>User</th>
+                                <th>Traffic Credited</th>
+                                <th>Say Hi Time</th>
                             </tr>
                             {foreach $logs as $log}
                                 <tr>

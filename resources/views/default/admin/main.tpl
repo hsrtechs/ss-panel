@@ -60,10 +60,10 @@
                             </li>
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="/user/profile" class="btn btn-default btn-flat">个人信息</a>
+                                    <a href="/user/profile" class="btn btn-default btn-flat">Personal Info</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="/user/logout" class="btn btn-default btn-flat">退出</a>
+                                    <a href="/user/logout" class="btn btn-default btn-flat">Log Out</a>
                                 </div>
                             </li>
                         </ul>
@@ -95,49 +95,49 @@
             <ul class="sidebar-menu">
                 <li>
                     <a href="/admin">
-                        <i class="fa fa-dashboard"></i> <span>管理中心</span>
+                        <i class="fa fa-dashboard"></i> <span>Admin Area</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/admin/config">
-                        <i class="fa fa-cubes"></i> <span>站点配置</span>
+                        <i class="fa fa-cubes"></i> <span>Site Config</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/admin/node">
-                        <i class="fa fa-sitemap"></i> <span>节点管理</span>
+                        <i class="fa fa-sitemap"></i> <span>Node Management</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/admin/user">
-                        <i class="fa fa-user"></i> <span>用户管理</span>
+                        <i class="fa fa-user"></i> <span>User Management</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/admin/invite">
-                        <i class="fa fa-users"></i> <span>邀请管理</span>
+                        <i class="fa fa-users"></i> <span>Invitation Management</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/admin/trafficlog">
-                        <i class="fa fa-history"></i> <span>流量记录</span>
+                        <i class="fa fa-history"></i> <span>Traffic Log</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/admin/checkinlog">
-                        <i class="fa  fa-check-square"></i> <span>签到日志</span>
+                        <i class="fa  fa-check-square"></i> <span>Say Hi Log</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/user">
-                        <i class="fa fa-reply-all"></i> <span>用户中心</span>
+                        <i class="fa fa-reply-all"></i> <span>User Portal</span>
                     </a>
                 </li>
 
