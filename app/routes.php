@@ -12,13 +12,11 @@ use Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware;
 /***
  * The slim documents: http://www.slimframework.com/docs/objects/router.html
  */
-
 // config
 $debug = false;
 if (defined("DEBUG")) {
-    $debug = true;
+    $debug = false;
 }
-
 // Make a Slim App
 // $app = new App($c)
 $app = new App([
@@ -128,9 +126,15 @@ $app->group('/mu', function () {
     $this->post('/nodes/{id}/info', 'App\Controllers\Mu\NodeController:info');
 })->add(new Mu());
 
-// mu
+// mu v2
 $app->group('/mu/v2', function () {
     $this->get('/users', 'App\Controllers\MuV2\UserController:index');
+
+    $this->post('/users/create', 'App\Controllers\MuV2\UserController:create');
+    $this->post('/users/{id}/suspend', 'App\Controllers\MuV2\UserController:Suspend');
+    $this->post('/users/{id}/terminate', 'App\Controllers\MuV2\UserController:Terminate');
+    $this->post('/users/{id}/changePassword', 'App\Controllers\MuV2\UserController:ChangePassword');
+
     $this->post('/users/{id}/traffic', 'App\Controllers\MuV2\UserController:addTraffic');
     $this->post('/nodes/{id}/online_count', 'App\Controllers\MuV2\NodeController:onlineUserLog');
     $this->post('/nodes/{id}/info', 'App\Controllers\MuV2\NodeController:info');
