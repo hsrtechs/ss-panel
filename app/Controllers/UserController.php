@@ -36,7 +36,7 @@ class UserController extends BaseController
     {
         $msg = DbConfig::get('user-index');
         if ($msg == null) {
-            $msg = "在后台修改用户中心公告...";
+            $msg = "Please change the portal announcement at admin area.";
         }
         return $this->view()->assign('msg', $msg)->display('user/index.tpl');
     }
@@ -127,18 +127,18 @@ class UserController extends BaseController
         $user = $this->user;
         if (!Hash::checkPassword($user->pass, $oldpwd)) {
             $res['ret'] = 0;
-            $res['msg'] = "旧密码错误";
+            $res['msg'] = "Old Password incorrect";
             return $response->getBody()->write(json_encode($res));
         }
         if ($pwd != $repwd) {
             $res['ret'] = 0;
-            $res['msg'] = "两次输入不符合";
+            $res['msg'] = "Passwords do not match";
             return $response->getBody()->write(json_encode($res));
         }
 
         if (strlen($pwd) < 8) {
             $res['ret'] = 0;
-            $res['msg'] = "密码太短啦";
+            $res['msg'] = "Password is too short";
             return $response->getBody()->write(json_encode($res));
         }
         $hashPwd = Hash::passwordHash($pwd);
@@ -197,7 +197,7 @@ class UserController extends BaseController
             $log->save();
         } catch (\Exception $e) {
         }
-        $res['msg'] = sprintf("获得了 %u MB流量.", $traffic);
+        $res['msg'] = sprintf("You got %u MB transfer", $traffic);
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
     }
@@ -215,13 +215,13 @@ class UserController extends BaseController
         $res = array();
         if (!Hash::checkPassword($user->pass, $passwd)) {
             $res['ret'] = 0;
-            $res['msg'] = " 密码错误";
+            $res['msg'] = " Password Invalid";
             return $this->echoJson($response, $res);
         }
         Auth::logout();
         $user->delete();
         $res['ret'] = 1;
-        $res['msg'] = "GG!您的帐号已经从我们的系统中删除.";
+        $res['msg'] = "Your account has been deleted from our system.";
         return $this->echoJson($response, $res);
     }
 
