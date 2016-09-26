@@ -10,7 +10,7 @@ use App\Utils\Hash;
 /***
  * Class Password
  * @package App\Controllers
- * 密码重置
+ * Password Reset
  */
 class PasswordController extends BaseController
 {
@@ -28,12 +28,12 @@ class PasswordController extends BaseController
         $user = User::where('email', $email)->first();
         if ($user == null) {
             $rs['ret'] = 0;
-            $rs['msg'] = '此邮箱不存在.';
+            $rs['msg'] = 'The email does not exist.';
             return $response->getBody()->write(json_encode($rs));
         }
         Password::sendResetEmail($email);
         $rs['ret'] = 1;
-        $rs['msg'] = '重置邮件已经发送,请检查邮箱.';
+        $rs['msg'] = 'The password reset mail has been sent, please check your mailbox.';
         return $response->getBody()->write(json_encode($rs));
     }
 
@@ -51,14 +51,14 @@ class PasswordController extends BaseController
         $token = PasswordReset::where('token', $tokenStr)->first();
         if ($token == null || $token->expire_time < time()) {
             $rs['ret'] = 0;
-            $rs['msg'] = '链接已经失效,请重新获取';
+            $rs['msg'] = 'Link expired, please get a new one.';
             return $response->getBody()->write(json_encode($rs));
         }
 
         $user = User::where('email', $token->email)->first();
         if ($user == null) {
             $rs['ret'] = 0;
-            $rs['msg'] = '链接已经失效,请重新获取';
+            $rs['msg'] = 'Link expired, please get a new one.';
             return $response->getBody()->write(json_encode($rs));
         }
 
@@ -67,11 +67,11 @@ class PasswordController extends BaseController
         $user->pass = $hashPassword;
         if (!$user->save()) {
             $rs['ret'] = 0;
-            $rs['msg'] = '重置失败,请重试';
+            $rs['msg'] = 'Failed to reset, please try again.';
             return $response->getBody()->write(json_encode($rs));
         }
         $rs['ret'] = 1;
-        $rs['msg'] = '重置成功';
+        $rs['msg'] = 'Reset successfully.';
         return $response->getBody()->write(json_encode($rs));
     }
 }
