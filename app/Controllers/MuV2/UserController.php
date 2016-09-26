@@ -91,31 +91,40 @@ class UserController extends BaseController
     {
         $name = $request->getParam('name');
         $email = strtolower($request->getParam('email'));
-        $download = $request->getParam('d');
-        $upload = $request->getParam('u');
+        try
+        {
+          $download = (int) $request->getParam('d');
+          $upload = (int) $request->getParam('u');
+        }catch(\Exception $e){
+          $this->setErrors($e->getCode(), $e->getMessage());
+        }
         $passwd = $request->getParam('password');
 
-        if (!Check::isEmailLegal($email)) {
-            $this->setErrors(self::IllegalEmail,"The email is not valid.");
+        if (!Check::isEmailLegal($email))
+        {
+            $this->setErrors(self::IllegalEmail, "The email is not valid.");
         }
         $user = User::where('email', $email)->first();
 
-        if ($user != null) {
-           $this->setErrors(self::EmailUsed,"The email is already in use.");
+        if ($user != null)
+        {
+           $this->setErrors(self::EmailUsed, "The email is already in use.");
         }
 
         // check pwd length
-        if (strlen($passwd) < 8) {
-            $this->setErrors(self::PasswordTooShort,"The Password is too short.");
+        if (strlen($passwd) < 8)
+        {
+            $this->setErrors(self::PasswordTooShort, "The Password is too short.");
         }
-        
-        // check pwd length
-        if (!is_numeric($download)) {
-            $this->setErrors(self::InvalidDownloadLimit,"The Download limit is not valid.");
+
+        if (!is_numeric($download))
+        {
+            $this->setErrors(self::InvalidDownloadLimit, "The Download limit is not valid.");
         }
-        
-        if (!is_numeric($upload)) {
-            $this->setErrors(self::InvalidUploadLimit,"The Upload limit is not valid.");
+
+        if (!is_numeric($upload))
+        {
+            $this->setErrors(self::InvalidUploadLimit, "The Upload limit is not valid.");
         }
 
         if(!$this->errors)

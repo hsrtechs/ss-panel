@@ -11,7 +11,6 @@ use App\Utils\Hash;
 use App\Utils\Tools;
 
 class User extends Model
-
 {
     protected $table = "user";
 
