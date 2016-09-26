@@ -51,11 +51,11 @@ class UserController extends AdminController
         $user->ref_by = $request->getParam('ref_by');
         if (!$user->save()) {
             $rs['ret'] = 0;
-            $rs['msg'] = "修改失败";
+            $rs['msg'] = "Failed to modify";
             return $response->getBody()->write(json_encode($rs));
         }
         $rs['ret'] = 1;
-        $rs['msg'] = "修改成功";
+        $rs['msg'] = "Successfully modified";
         return $response->getBody()->write(json_encode($rs));
     }
 
@@ -65,11 +65,11 @@ class UserController extends AdminController
         $user = User::find($id);
         if (!$user->delete()) {
             $rs['ret'] = 0;
-            $rs['msg'] = "删除失败";
+            $rs['msg'] = "Failed to delete";
             return $response->getBody()->write(json_encode($rs));
         }
         $rs['ret'] = 1;
-        $rs['msg'] = "删除成功";
+        $rs['msg'] = "Successfully ";
         return $response->getBody()->write(json_encode($rs));
     }
 
