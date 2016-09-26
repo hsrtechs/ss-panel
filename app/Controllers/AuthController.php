@@ -54,14 +54,14 @@ class AuthController extends BaseController
         if ($user == null) {
             $res['ret'] = 0;
             $res['error_code'] = self::UserNotExist;
-            $res['msg'] = "邮箱或者密码错误";
+            $res['msg'] = "Email or Password invalid";
             return $this->echoJson($response, $res);
         }
 
         if (!Hash::checkPassword($user->pass, $passwd)) {
             $res['ret'] = 0;
             $res['error_code'] = self::UserPasswordWrong;
-            $res['msg'] = "邮箱或者密码错误";
+            $res['msg'] = "Email or Password invalid";
             return $this->echoJson($response, $res);
         }
         // @todo
@@ -103,7 +103,7 @@ class AuthController extends BaseController
         if ($c == null) {
             $res['ret'] = 0;
             $res['error_code'] = self::WrongCode;
-            $res['msg'] = "邀请码无效";
+            $res['msg'] = "Invitation code invalid";
             return $this->echoJson($response, $res);
         }
 
@@ -111,14 +111,14 @@ class AuthController extends BaseController
         if (!Check::isEmailLegal($email)) {
             $res['ret'] = 0;
             $res['error_code'] = self::IllegalEmail;
-            $res['msg'] = "邮箱无效";
+            $res['msg'] = "Email Invalid";
             return $this->echoJson($response, $res);
         }
         // check pwd length
         if (strlen($passwd) < 8) {
             $res['ret'] = 0;
             $res['error_code'] = self::PasswordTooShort;
-            $res['msg'] = "密码太短";
+            $res['msg'] = "Password is too short";
             return $this->echoJson($response, $res);
         }
 
@@ -126,7 +126,7 @@ class AuthController extends BaseController
         if ($passwd != $repasswd) {
             $res['ret'] = 0;
             $res['error_code'] = self::PasswordNotEqual;
-            $res['msg'] = "两次密码输入不符";
+            $res['msg'] = "Passwords do not match";
             return $this->echoJson($response, $res);
         }
 
@@ -135,14 +135,14 @@ class AuthController extends BaseController
         if ($user != null) {
             $res['ret'] = 0;
             $res['error_code'] = self::EmailUsed;
-            $res['msg'] = "邮箱已经被注册了";
+            $res['msg'] = "Email taken";
             return $this->echoJson($response, $res);
         }
 
         // verify email
         if (Config::get('emailVerifyEnabled') && !EmailVerify::checkVerifyCode($email, $verifycode)) {
             $res['ret'] = 0;
-            $res['msg'] = '邮箱验证代码不正确';
+            $res['msg'] = 'Verification code invalid';
             return $this->echoJson($response, $res);
         }
 
@@ -151,7 +151,7 @@ class AuthController extends BaseController
         $ipRegCount = Check::getIpRegCount($ip);
         if ($ipRegCount >= Config::get('ipDayLimit')) {
             $res['ret'] = 0;
-            $res['msg'] = '当前IP注册次数超过限制';
+            $res['msg'] = 'Your IP has exceeded the max allowed sign ups per day';
             return $this->echoJson($response, $res);
         }
 
@@ -172,12 +172,12 @@ class AuthController extends BaseController
 
         if ($user->save()) {
             $res['ret'] = 1;
-            $res['msg'] = "注册成功";
+            $res['msg'] = "Resgistered successfully";
             $c->delete();
             return $this->echoJson($response, $res);
         }
         $res['ret'] = 0;
-        $res['msg'] = "未知错误";
+        $res['msg'] = "Unknown Error";
         return $this->echoJson($response, $res);
     }
 
@@ -189,7 +189,7 @@ class AuthController extends BaseController
         if (!Check::isEmailLegal($email)) {
             $res['ret'] = 0;
             $res['error_code'] = self::VerifyEmailWrongEmail;
-            $res['msg'] = '邮箱无效';
+            $res['msg'] = 'Email Invalid';
             return $this->echoJson($response, $res);
         }
 
@@ -198,17 +198,17 @@ class AuthController extends BaseController
         if ($user != null) {
             $res['ret'] = 0;
             $res['error_code'] = self::VerifyEmailExist;
-            $res['msg'] = "邮箱已经被注册了";
+            $res['msg'] = "Email Taken";
             return $this->echoJson($response, $res);
         }
 
         if (EmailVerify::sendVerification($email)) {
             $res['ret'] = 1;
-            $res['msg'] = '验证代码已发送至您的邮箱，请在登录邮箱后将验证码填到相应位置.';
+            $res['msg'] = 'We have sent the verification code to your email address, please fill the verification code you get to the field';
             return $this->echoJson($response, $res);
         }
         $res['ret'] = 0;
-        $res['msg'] = '邮件发送失败，请联系管理员';
+        $res['msg'] = 'Cannot send email, please contact Admin';
         return $this->echoJson($response, $res);
     }
 
